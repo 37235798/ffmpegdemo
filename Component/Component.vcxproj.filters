@@ -10,41 +10,35 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="header">
-      <UniqueIdentifier>{1aec2569-722d-4ca4-83f1-2c6ba79eb083}</UniqueIdentifier>
+      <UniqueIdentifier>{76a4deb3-21ef-4180-a549-581bef7583ed}</UniqueIdentifier>
     </Filter>
     <Filter Include="cpp">
-      <UniqueIdentifier>{5eab9db2-d4dd-49a1-a66d-bb0782284cc1}</UniqueIdentifier>
+      <UniqueIdentifier>{e2915540-a60a-4479-a040-893ef7db7d63}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Avi2Yuv.cpp">
+    <ClCompile Include="Component.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Flv2AudioVideo.cpp">
+    <ClCompile Include="cpp\test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Rtsp2Rtmp.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="parseStream.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DelogoTest.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="remuxing.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DecodeH264.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Delogo.cpp">
-      <Filter>cpp</Filter>
-    </ClCompile>
+    <ClCompile Include="AudioEncoder.cpp" />
+    <ClCompile Include="AudioResampler.cpp" />
+    <ClCompile Include="Muxer.cpp" />
+    <ClCompile Include="VideoEncoder.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Delogo.h">
-      <Filter>header</Filter>
-    </ClInclude>
+    <ClInclude Include="header\test.h" />
+    <ClInclude Include="AudioEncoder.h" />
+    <ClInclude Include="AudioResampler.h" />
+    <ClInclude Include="Muxer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="VideoEncoder.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Component.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

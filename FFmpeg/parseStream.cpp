@@ -4,11 +4,14 @@ extern "C" {
 }
 #pragma comment(lib, "avformat.lib")
 int main(int argc, char *argv[]) {
+	/*
 	if (argc < 2) {
 		std::cout << "Usage: [programe] [intput_video_path/url]" << std::endl;
 		return -1;
 	}
 	char *inputUrl = argv[1];
+	*/
+	const char *inputUrl = "http://samples.mplayerhq.hu/avi/2-audio-streams.avi";
 	AVFormatContext *fmtCtx = NULL;
 	int ret;
 	ret = avformat_network_init();
@@ -37,16 +40,16 @@ int main(int argc, char *argv[]) {
 
 	int nbStreams = fmtCtx->nb_streams;
 	for (int i = 0; i < nbStreams; i++) {
-		// fmtCtx->streams[i]->codec ÐÂ°æffmpegÒÑÆúÓÃ
+		// fmtCtx->streams[i]->codec ï¿½Â°ï¿½ffmpegï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		if (fmtCtx->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_VIDEO) {
 			videoIndex = i;
 		}
 	}
-	std::cout << "----------ÊäÈëÁ÷ÐÅÏ¢---------------" << std::endl;
+	std::cout << "----------ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢---------------" << std::endl;
 	av_dump_format(fmtCtx, 0, inputUrl, NULL);
-	long duration = fmtCtx->duration;  //Î¢ÃëÊý
+	long duration = fmtCtx->duration;  //Î¢ï¿½ï¿½ï¿½ï¿½
 	std::cout << "duration: " << duration << std::endl;
-	std::cout << "ÊÓÆµÊ±³£Îª: " << duration / 1000.0 / 1000.0 << "s" << std::endl;
+	std::cout << "ï¿½ï¿½ÆµÊ±ï¿½ï¿½Îª: " << duration / 1000.0 / 1000.0 << "s" << std::endl;
 	system("pause");
 	return 0;
 }
